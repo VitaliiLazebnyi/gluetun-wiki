@@ -222,6 +222,13 @@ All traffic stays blocked until the VPN is up, including to the PureVPN website.
 
 Every error is retried, with a delay starting at 15 seconds and doubling after each failure. The delay goes back to 15 seconds after a successful connection. To stop retries with wrong credentials, fix the settings.
 
+A start that logs in to PureVPN again can take about 30 seconds, longer than the Docker health check start period of the image. If other containers wait for Gluetun to be healthy (`depends_on` with `condition: service_healthy`), give the health check more time:
+
+```yml
+    healthcheck:
+      start_period: 60s
+```
+
 ### Errors
 
 | Error | Meaning |
