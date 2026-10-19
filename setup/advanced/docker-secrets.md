@@ -19,6 +19,10 @@ The following secrets can be used:
 - `wireguard_preshared_key`
 - `wireguard_addresses`
 - `amneziawg_conf`
+- `purevpn_username`
+- `purevpn_password`
+- `purevpn_totp_secret`
+- `purevpn_session_token`
 - `httpproxy_user`
 - `httpproxy_password`
 - `shadowsocks_password`

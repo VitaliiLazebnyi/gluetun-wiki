@@ -7,6 +7,8 @@ ignorePatterns:
   - pattern: "^http://99.99.99.99"
   # Behind a login wall
   - pattern: "^https://my.nordaccount.com/dashboard/nordvpn/manual-configuration/service-credentials/$"
+  # Behind a login wall and Cloudflare protection (status code 403)
+  - pattern: "^https://my.purevpn.com(/.*)?$"
   # https://git.zx2c4.com/wireguard-go gives status code 502 from time to time
   - pattern: "^https://git.zx2c4.com/wireguard-go$"
   # Reddit posts give status code 403 for Github Actions runners
